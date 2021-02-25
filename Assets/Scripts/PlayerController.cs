@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PlayerController : MonoBehaviour
 {
+
+    public float speed;
+    public Rigidbody2D myRigid;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +18,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float hori = Input.GetAxis("Horizontal");
+        float verti = Input.GetAxis("Vertical");
+        Vector2 myForce = new Vector2(hori, verti);
+        myRigid.AddForce(myForce * speed);
     }
 }
+
