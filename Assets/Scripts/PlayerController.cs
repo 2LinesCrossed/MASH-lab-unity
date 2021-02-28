@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public Rigidbody2D myRigid;
+    public int soldiercount;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,20 @@ public class PlayerController : MonoBehaviour
         float verti = Input.GetAxis("Vertical");
         Vector2 myForce = new Vector2(hori, verti);
         myRigid.AddForce(myForce * speed);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("Collision!");
+        if (collision.gameObject.tag == "Soldier")
+        {
+            if (soldiercount < 3)
+            {
+                collision.gameObject.SetActive(false);
+            
+                soldiercount++;
+            }
+
+        }
     }
 }
 

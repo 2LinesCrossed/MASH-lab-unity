@@ -297,6 +297,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: playercopter
       objectReference: {fileID: 0}
+    - target: {fileID: 1063759749165850778, guid: 7958ed81631a9ec45bec90fb2f5d1e11,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063759749165850781, guid: 7958ed81631a9ec45bec90fb2f5d1e11,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063759749165850781, guid: 7958ed81631a9ec45bec90fb2f5d1e11,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1063759749165850783, guid: 7958ed81631a9ec45bec90fb2f5d1e11,
         type: 3}
       propertyPath: m_LocalPosition.x
