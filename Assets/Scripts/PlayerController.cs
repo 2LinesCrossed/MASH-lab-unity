@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
         float verti = Input.GetAxis("Vertical");
         Vector2 myForce = new Vector2(hori, verti);
         myRigid.AddForce(myForce * speed);
+
+        
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,5 +47,6 @@ public class PlayerController : MonoBehaviour
             gameOverText.gameObject.SetActive(true);
         }
     }
+    
 }
 
