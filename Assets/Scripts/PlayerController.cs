@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Rigidbody2D myRigid;
     public int soldiercount;
+    public TextMeshProUGUI gameOverText;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,11 @@ public class PlayerController : MonoBehaviour
                 soldiercount++;
             }
 
+        }
+        if(collision.gameObject.tag == "Tree")
+        {
+            this.gameObject.SetActive(false);
+            gameOverText.gameObject.SetActive(true);
         }
     }
 }
